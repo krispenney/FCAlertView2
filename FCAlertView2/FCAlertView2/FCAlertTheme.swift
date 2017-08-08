@@ -26,4 +26,9 @@ class FCAlertTheme {
 // MARK: SeparatorLineView
   var separatorBackgroundColor: UIColor = .groupTableViewBackground
   var separatorBackgroundAlpha: CGFloat = 1
+  
+// MARK: Animations
+  var animateInDuration: TimeInterval = 0.5
+  var animateOutDuration: TimeInterval = 0.5
+  var autoDismissSeconds: TimeInterval = 0
 }

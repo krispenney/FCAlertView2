@@ -22,6 +22,7 @@ class FCAlertView: UIView, FCModal {
     let label = UILabel()
     label.textAlignment = .center
     label.baselineAdjustment = .alignCenters
+    label.font = UIFont.boldSystemFont(ofSize: label.font.pointSize)
     return label
   }()
   
@@ -51,6 +52,11 @@ class FCAlertView: UIView, FCModal {
     titleLabel.text = title
     bodyLabel.text = body
     let width = frame.width - self.theme.dialogMargin * 2
+    
+    let verticalStack = UIStackView()
+    verticalStack.alignment = .fill
+    verticalStack.axis = .vertical
+    verticalStack.spacing = self.theme.dialogItemSpacing
     
     if !title.isEmpty {
       // MARK: Setup Title
